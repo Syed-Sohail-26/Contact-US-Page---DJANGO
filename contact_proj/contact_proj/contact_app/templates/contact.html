@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+  <p style="text-align: center; font-size: 30px; font-weight: bold; padding-top: 30px;">CONTACT US</p>
+
+  <form method="POST">
+      {% csrf_token %}
+  <div class="text-white">
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Name</label>
+          <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">E-mail</label>
+        <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Subject</label>
+        <textarea name="subject" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Subject to be addressed"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What's on your mind?"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Query</label>
+        <textarea name="query" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Query to be solved"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-danger btn-lg">Submit</button>
+  </div>
+  </form>
+
+</div>
+{% endblock content %}

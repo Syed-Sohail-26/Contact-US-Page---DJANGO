@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Customers</title>
+</head>
+<body style="background-image: url('https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp'); background-size: cover;">
+
+
+<style>
+h1{
+  text-align: center;
+}
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<h1> ALL CUSTOMER QUERIES </h1>
+<table class="table table-hover table-bordered table-dark border-danger">
+    <tr>
+        <th> name </th>
+        <th> email </th>
+        <th> subject </th>
+        <th> message</th>
+        <th> query </th>
+    </tr>
+    {% for obj in allstu %}
+
+
+    <tr>
+        <td>{{obj.name }}</td>
+        <td>{{obj.email }}</td>
+        <td>{{obj.subject }}</td>
+        <td>{{obj.message}}</td>
+        <td>{{obj.query}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+<form>
+ <input type="button" value="PREVIOUS PAGE" onclick="history.back()">
+</form>
+
+{% block content %}
+
+{{msg2}}
+
+{% endblock %}
+</body>
+</html>
